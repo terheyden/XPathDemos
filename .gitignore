@@ -1,0 +1,9 @@
+# Note - don't exclude eclipse files, so others can import project:
+# .project
+# .classpath
+# proguard.cfg
+
+# Ignore output / settings dirs:
+.settings
+out
+target
