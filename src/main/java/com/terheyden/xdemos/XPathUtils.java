@@ -36,13 +36,11 @@ public class XPathUtils {
         "<book>\n" +
         "  <title lang=\"eng\">Harry Potter</title>\n" +
         "  <price>29.99</price>\n" +
-        "<awesome/>" +
         "</book>\n" +
         "\n" +
         "<book>\n" +
         "  <title lang=\"eng\">Learning XML</title>\n" +
         "  <price>39.95</price>\n" +
-        "<awesome stats=\"off\"/>" +
         "</book>\n" +
         "\n" +
         "</bookstore>";
@@ -51,7 +49,7 @@ public class XPathUtils {
      * A simple example upon which the utils are built.
      * Docs: http://www.saxonica.com/documentation/xpath-api/s9api-xpath.xml
      */
-    private static void simple() {
+    public static void simple() {
         try {
 
             // XPath objs:
@@ -77,7 +75,6 @@ public class XPathUtils {
                 // Each book node has a title and price.
                 // Get the title and show it.
                 XdmNode bookNode = (XdmNode) item;
-                System.out.println(getXdmNodeAsXML(bookNode, null));
                 XdmNode titleNode = getChild(bookNode, "title");
                 String title = titleNode.getStringValue();
                 String lang = titleNode.getAttributeValue(new QName("lang"));

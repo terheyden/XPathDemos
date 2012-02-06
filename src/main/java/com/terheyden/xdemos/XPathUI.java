@@ -71,6 +71,7 @@ public class XPathUI {
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
                     XPathUI window = new XPathUI();
@@ -152,6 +153,7 @@ public class XPathUI {
 
         JButton btnRun = new JButton("Run!");
         btnRun.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 processXml();
             }
